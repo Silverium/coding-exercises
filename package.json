@@ -2,9 +2,10 @@
   "name": "coding-exercises",
   "version": "1.0.0",
   "description": "JavaScript coding exercises",
-  "main": "growingDifferentVectors.js",
+  "main": "romanNumerals.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test-watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,9 @@
   },
   "homepage": "https://github.com/Silverium/coding-exercises#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.9.6",
     "@types/jest": "^25.2.1",
+    "babel-jest": "^26.0.1",
     "eslint-plugin-jest": "^23.10.0",
     "jest": "^26.0.1"
   }
