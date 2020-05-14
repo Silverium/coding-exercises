@@ -1,11 +1,21 @@
-import { find } from './typoTolerance';
-describe('typo tolerance', () => {
+import { find, Factory } from './typoTolerance';
+describe('Fuzzy Filter', () => {
+  describe('no characters', () => {
+    const finder = Factory({ minChars: 0, typos: 0 });
+    it('should be truty for any source text', () => {
+      expect(finder('', 'hello')).toBeTruthy();
+    });
+    it('should be truthy without source text', () => {
+      expect(finder('', 'hella')).toBeTruthy();
+    });
+  });
   describe('single character', () => {
+    const finder = Factory({ minChars: 1, typos: 0 });
     it('should be falsy for no total coincidences', () => {
-      expect(find('a', 'hello', { minChars: 1, typos: 0 })).toBeFalsy();
+      expect(finder('a', 'hello')).toBeFalsy();
     });
     it('should find without typo tolerance', () => {
-      expect(find('a', 'hella', { minChars: 1, typos: 0 })).toBeTruthy();
+      expect(finder('a', 'hella')).toBeTruthy();
     });
   });
   describe('spaces', () => {
