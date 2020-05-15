@@ -3,7 +3,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  plugins: 'jest',
+  plugins: ['jest'],
   extends: ['eslint:recommended', 'plugin:jest/recommended'],
   parserOptions: {
     ecmaVersion: 2015,
