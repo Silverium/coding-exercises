@@ -37,12 +37,12 @@ describe('performance', () => {
     const t = new Date() - start;
     expect(t < 300).toBe(true);
   });
-  it('should take less than 300ms for different numbers', () => {
+  it('should take less than 500ms for different numbers', () => {
     const input = _.times(100000, (n) => n);
     const start = new Date();
     const result = solution(input);
     const t = new Date() - start;
     expect(result).toBe(666700000);
-    expect(t < 300).toBe(true);
+    expect(t < 500).toBe(true);
   });
 });
