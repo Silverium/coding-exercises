@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "JavaScript coding exercises",
   "main": "romanNumerals.js",
+  "type": "commonjs",
   "scripts": {
     "test": "jest",
     "test-watch": "jest --watch"
@@ -30,5 +31,8 @@
     "babel-jest": "^26.0.1",
     "eslint-plugin-jest": "^23.10.0",
     "jest": "^26.0.1"
+  },
+  "dependencies": {
+    "bignumber.js": "^9.1.2"
   }
 }
